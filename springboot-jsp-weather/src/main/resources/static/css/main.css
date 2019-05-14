@@ -1,0 +1,26 @@
+.page-title{
+    color: darkgreen;
+}
+
+.selectCls{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+#selectedCity{
+	font-size: medium;
+}
+
+table,table tr th, table tr td {
+	border:1px solid #000;
+}
+
+table {
+	width: 500px; 
+	min-height: 25px; 
+	line-height: 25px; 
+	text-align: left; 
+	border-collapse: collapse; 
+	padding:2px;
+} 
+

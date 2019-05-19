@@ -1,4 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% 
+	System.out.println(request.getAttribute("city")); 
+	String cityStr = request.getAttribute("city").toString();
+	String[] cityArray = {};
+	if(cityStr != null && !cityStr.isEmpty()) {
+		cityArray = cityStr.split(",");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +17,13 @@
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body onload='getWeather();'>
+	<input id="apikey" type="hidden" value="<%=request.getAttribute("apikey").toString()%>"/>
 	<h2 class="page-title">Weather in Australia</h2>
 	<div class='selectCls'>
 		<select id="selectedCity" onchange="getWeather();">
-		  <option value ="Sydney" selected='true'>Sydney</option>
-		  <option value ="Melbourne">Melbourne</option>
-		  <option value="Wollongong">Wollongong</option>
+		<% for(String city: cityArray){ %>
+		  <option value ="<%=city %>"><%=city %></option>
+		<% }%>
 		</select>
 	</div>
     <table>

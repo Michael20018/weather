@@ -1,6 +1,6 @@
 //retrieve weather data by Api
 function getWeather(){
-	let API_KEY = 'afde2ea62bdba112dd9ee73f8c3ec9b7';
+	let API_KEY = $('#apikey').val();
 	let loc = $('#selectedCity').val() + ',AU';
     $.ajax({
         type:"GET",
@@ -16,7 +16,7 @@ function getWeather(){
            	$("#updatedTime").html(weekdayName[dateObj.getDay()] + ' ' + dateObj.getHours() + ':' + dateObj.getMinutes());
            	$("#weather").html(data.weather[0].main);
            	$("#temperature").html(Math.round(data.main.temp) + ' °C');
-           	$("#wind").html(Math.round(data.wind.speed * 3.6) + 'km/h');
+           	$("#wind").html(Math.round(data.wind.speed * 3.6) + ' km/h');
         },
         error:function(jqXHR){
             console.log("Error: "+jqXHR.status);

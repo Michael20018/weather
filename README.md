@@ -7,5 +7,7 @@ Software Requirement:
 
 After run project(springboot-jsp-weather) in your IDE,   
 or mvn clean package and java -jar ...  
-See http://localhost:8080 in your browser.
+See http://localhost:5000 in your browser.   
 
+See in AWS:   
+http://weatherdemo-env-1.rwpxkakw3b.ap-southeast-1.elasticbeanstalk.com/

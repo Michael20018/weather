@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <% 
-	System.out.println(request.getAttribute("city")); 
 	String cityStr = request.getAttribute("city").toString();
 	String[] cityArray = {};
 	if(cityStr != null && !cityStr.isEmpty()) {
